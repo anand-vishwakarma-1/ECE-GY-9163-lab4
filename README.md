@@ -35,4 +35,4 @@ I evaluated this defense on a BadNet, B1, with a "sunglasses backdoor" on YouTub
 
 A [report](report.md) featuring a table with accuracy on clean test data and the attack success rate on backdoored test data as a function of the fraction of channels pruned (X).
 
-Feel free to explore the code, provide feedback, and contribute to the project!
+Feel free to explore the code, provide feedback!
