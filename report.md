@@ -4,7 +4,7 @@
 In response to backdoor attacks on neural networks, this report outlines the design and evaluation of a pruning defense mechanism for BadNets trained on the YouTube Face dataset. The goal is to create a resilient neural network capable of accurately classifying clean inputs while detecting and mitigating backdoor attacks.
 
 ## Methodology
-The defense involves iteratively pruning BadNet's last pooling layer by removing one channel at a time, prioritizing channels with decreasing average activation values over the validation set. Pruning continues until the validation accuracy drops at least X% below the original accuracy, resulting in the new network B'. Evaluation includes a BadNet with a known backdoor and repaired networks for different pruning thresholds (X={2%, 4%, 10%}).
+The defense involves iteratively pruning BadNet's last pooling layer by removing one channel at a time, prioritizing channels with decreasing average activation values over the validation set. Pruning continues until the validation accuracy drops at least X% below the original accuracy, resulting in the new network B'. Evaluation includes a BadNet with a known backdoor and repaired networks for different pruning thresholds (X-{2%, 4%, 10%}).
 
 ## Results
 
@@ -20,7 +20,7 @@ The defense strategy involves iteratively removing neurons from the last pooling
 The following table summarizes accuracy on clean test data and the attack success rate on backdoored test data as a function of the fraction of channels pruned (X):
 
 | Fraction of Channels Pruned   |   Clean Accuracy |   Attack Success Rate |
-|===============================|==================|=======================|
+|-------------------------------|------------------|-----------------------|
 | 1/60 (1.67%)                  |       98.649     |            100        |
 | 2/60 (3.33%)                  |       98.649     |            100        |
 | 3/60 (5.00%)                  |       98.649     |            100        |
